@@ -26,5 +26,5 @@ def rgb2loftrgray(img):
     resizer = transforms.Resize([480,640])
     gray=transforms.functional.rgb_to_grayscale(img)
     img11 = resizer(gray)
-    img11 = img11[None].cuda()
+    img11 = img11.cuda()
     return img11
